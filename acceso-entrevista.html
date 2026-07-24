@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Acceso Entrevista | SCP-XXXX</title>
+
+<style>
+body {
+    background:#050505;
+    color:#cfcfcf;
+    font-family:monospace;
+    padding:30px;
+}
+
+.container {
+    max-width:600px;
+    margin:auto;
+    background:#0b0b0b;
+    border:1px solid #555;
+    padding:25px;
+    text-align:center;
+}
+
+input {
+    background:#111;
+    color:white;
+    border:1px solid #555;
+    padding:10px;
+    width:80%;
+}
+
+button {
+    margin-top:15px;
+    background:#222;
+    color:white;
+    border:1px solid #777;
+    padding:10px 20px;
+}
+
+#error {
+    color:#ff3333;
+}
+
+#correcto {
+    display:none;
+    color:#aaa;
+}
+
+a {
+    color:#aaa;
+    text-decoration:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>FUNDACIÓN SCP</h1>
+
+<p>
+ARCHIVO DE ENTREVISTA RESTRINGIDO
+</p>
+
+<hr>
+
+<p>
+Introduzca la clave de autorización.
+</p>
+
+<input id="clave" placeholder="Contraseña">
+
+<br>
+
+<button onclick="verificar()">
+Verificar
+</button>
+
+<p id="error"></p>
+
+<p id="correcto">
+
+ACCESO CONCEDIDO.
+
+<br><br>
+
+<a href="entrevista.html">
+Abrir entrevista
+</a>
+
+</p>
+
+</div>
+
+
+<script>
+
+function verificar(){
+
+let clave = document.getElementById("clave").value;
+
+if(clave.toUpperCase()=="SCP CREADO"){
+
+document.getElementById("correcto").style.display="block";
+document.getElementById("error").innerHTML="";
+
+}
+
+else{
+
+document.getElementById("error").innerHTML=
+"ACCESO DENEGADO.";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
