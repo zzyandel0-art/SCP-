@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>SCP-XXXX | Archivo Perdido</title>
+
+<style>
+body {
+    background: #050505;
+    color: #cfcfcf;
+    font-family: monospace;
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #555;
+    padding: 25px;
+    background: #0b0b0b;
+    box-shadow: 0 0 20px black;
+}
+
+.logo {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.red {
+    color: #ff3333;
+}
+
+.bar {
+    width: 100%;
+    height: 25px;
+    border: 1px solid #777;
+    margin-top: 20px;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: #aaa;
+    animation: load 8s forwards;
+}
+
+@keyframes load {
+    0% {width:0%;}
+    70% {width:73%;}
+    100% {width:73%;}
+}
+
+.hidden {
+    display:none;
+}
+
+.file {
+    margin-top:30px;
+    border-top:1px solid #444;
+    padding-top:20px;
+}
+
+.censor {
+    background:white;
+    color:white;
+    padding:0 5px;
+}
+
+.warning {
+    color:#ff3333;
+    font-size:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+FUNDACIÓN SCP
+</div>
+
+<br>
+
+<center>
+RECUPERANDO ARCHIVO...
+<br><br>
+
+Archivo:
+<strong>SCP-XXXX</strong>
+
+<div class="bar">
+<div class="progress"></div>
+</div>
+
+<p id="percent">
+Recuperación: 0%
+</p>
+
+</center>
+
+
+<div id="fail" class="hidden">
+
+<p class="warning">
+⚠ RECUPERACIÓN FALLIDA
+</p>
+
+<p>
+Motivo:
+El archivo presenta daños irreparables.
+<br>
+Datos recuperados parcialmente.
+</p>
+
+
+<div class="file">
+
+<h2>SCP-XXXX</h2>
+
+<p>
+Nivel de amenaza:
+<span class="censor">KETER</span>
+</p>
+
+
+<p>
+Descripción:
+</p>
+
+<p>
+SCP-XXXX es una entidad cuya existencia parece estar relacionada
+con la acumulación de actos negativos realizados por la humanidad.
+</p>
+
+
+<p>
+Los primeros registros indican que la entidad no fue creada por
+ningún individuo conocido.
+</p>
+
+
+<p>
+Hipótesis actual:
+La entidad surgió como consecuencia de
+<span class="censor">████████████</span>
+</p>
+
+
+<p>
+Los investigadores creen que mientras exista odio, violencia y
+sufrimiento, SCP-XXXX continuará desarrollándose.
+</p>
+
+
+<p>
+ADVERTENCIA:
+<br>
+No intente establecer comunicación con la entidad.
+</p>
+
+
+<p>
+Archivo recuperado:
+37%
+</p>
+
+
+<p>
+Fragmento encontrado:
+
+<br><br>
+
+"Nosotros no creamos a SCP-XXXX..."
+
+<br>
+
+"...solo le dimos suficiente alimento para nacer."
+
+</p>
+
+
+<p>
+Referencia:
+<a href="#" style="color:#aaa">
+[ARCHIVO PERDIDO]
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+let p = 0;
+let text = document.getElementById("percent");
+
+let timer = setInterval(()=>{
+
+p++;
+
+text.innerHTML="Recuperación: "+p+"%";
+
+if(p>=73){
+
+clearInterval(timer);
+
+setTimeout(()=>{
+
+document.getElementById("fail").style.display="block";
+
+},1000);
+
+}
+
+},100);
+
+</script>
+
+
+</body>
+</html>
